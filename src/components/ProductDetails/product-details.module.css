@@ -1,0 +1,14 @@
+.product-details .product-details__info {
+  background-color: var(--grey-color);
+  border-radius: 3px;
+  padding: 1.25rem;
+}
+.product-details .product-details__price {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 7px;
+}
+.product-details .product-details__description {
+  color: #989fa5;
+}

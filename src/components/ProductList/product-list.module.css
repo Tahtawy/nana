@@ -1,0 +1,23 @@
+product-list {
+}
+
+.product {
+  cursor: pointer;
+}
+.product .product-img {
+  height: 250px;
+  object-fit: cover;
+}
+.product .product__header {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+.product .product__total-reviews {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.product .product__price {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}

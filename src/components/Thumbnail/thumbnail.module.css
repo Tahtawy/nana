@@ -1,0 +1,22 @@
+.thumbnail {
+  margin-bottom: 2.5rem;
+}
+
+.thumbnail .thumbnail__main-view {
+  height: 350px;
+}
+.thumbnail .thumbnail__main-view img {
+  object-fit: cover;
+}
+.thumbnail .thumbnail__list {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.thumbnail .thumbnail__list [class*='col-'] {
+  padding-right: 0;
+}
+.thumbnail .thumbnail__list img {
+  cursor: pointer;
+  height: 100px;
+}

@@ -1,0 +1,4 @@
+.review__pagination .reviews__pagination-list li.active .reviews__page-link {
+  background-color: var(--primary-color);
+  color: #fff;
+}

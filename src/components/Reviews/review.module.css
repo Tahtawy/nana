@@ -1,0 +1,8 @@
+.reviews .reviews__rate {
+  background-color: var(--grey-color);
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+.reviews .reviews__item {
+  border-bottom: 1px solid var(--grey-color);
+}
