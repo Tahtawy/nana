@@ -1,18 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from 'react';
 import { SelectedProductContext } from '../../ProductContext';
+import {
+  fetchProducts,
+  fetchProductById,
+} from '../../../../services/Product.service';
 
 import styles from './product-list.module.css';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/products`);
-      const productsData = await response.json();
+    const setProductsFromFetchedApi = async () => {
+      const productsData = await fetchProducts();
       setProducts(productsData);
     };
-    fetchProducts();
+    setProductsFromFetchedApi();
   }, []);
 
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -26,10 +29,7 @@ const ProductList = () => {
     const fetchSingleProduct = async () => {
       if (!selectedProductId) return;
 
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/productDetails/${selectedProductId}`,
-      );
-      const data = await response.json();
+      const data = await fetchProductById(selectedProductId);
       setSelectedProduct({ price: selectedProductPrice, ...data });
     };
     fetchSingleProduct();

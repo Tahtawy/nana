@@ -2,18 +2,13 @@ import React from 'react';
 import './App.css';
 
 // Components.
+import Header from './shared/Header/Header';
 import ProductPage from './pages/ProductPage/ProductPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <div className="container-fluid">
-          <h4 className="mb-0">
-            <i className="fa fa-shopping-bag"></i> Nice <span>Products</span>
-          </h4>
-        </div>
-      </header>
+      <Header />
       <ProductPage />
     </div>
   );
