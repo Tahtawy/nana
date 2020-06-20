@@ -23,7 +23,11 @@ const Thumbnail = ({ pictures, children }) => {
         <div className={`${styles['thumbnail__main-view']} mb-3`}>
           <img
             className="w-100 h-100"
-            src={pictures[currentImageIndex].photo}
+            src={
+              pictures[currentImageIndex]
+                ? pictures[currentImageIndex].photo
+                : pictures[0].photo
+            }
             alt=""
           />
         </div>
