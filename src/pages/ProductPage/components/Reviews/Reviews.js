@@ -1,18 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from 'react';
-import PropTypes from 'prop-types';
 import { ReviewsContext } from '../../ProductContext';
 
 import styles from './review.module.css';
 
 // Components.
-import Pagination from '../Pagination/Pagination';
-import EmptyContent from '../EmptyContent/EmptyContent';
+import Pagination from '../../../../shared/Pagination/Pagination';
+import EmptyContent from '../../../../shared/EmptyContent/EmptyContent';
 
 const REVIEWS_PER_PAGE = 2;
 
 const Reviews = ({ children }) => {
   const { reviews, setReviews } = useContext(ReviewsContext);
-  const [unSortedReviews, setUnSortedReviews] = useState(reviews);
   const [sortMethod, setSortMethod] = useState('');
   const [currentReviewPage, setCurrentReviewPage] = useState(1);
   const [totalItems, setTotalItems] = useState(reviews.length);
@@ -68,7 +67,6 @@ const Reviews = ({ children }) => {
             value={sortMethod}
             onChange={(e) => setSortMethod(e.target.value)}
           >
-            <option value=""></option>
             <option value="ASC">Low to high</option>
             <option value="DES">High to low</option>
           </select>

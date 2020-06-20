@@ -4,9 +4,9 @@ import { SelectedProductContext, ReviewsContext } from '../../ProductContext';
 import styles from './product-details.module.css';
 
 // Components.
-import Thumbnail from '../Thumbnail/Thumbnail';
+import Thumbnail from '../../../../shared/Thumbnail/Thumbnail';
 import Reviews from '../Reviews/Reviews';
-import EmptyContent from '../EmptyContent/EmptyContent';
+import EmptyContent from '../../../../shared/EmptyContent/EmptyContent';
 
 const ProductDetails = () => {
   const { selectedProduct } = useContext(SelectedProductContext);
